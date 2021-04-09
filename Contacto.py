@@ -4,7 +4,6 @@ class Contacto:
         self.apellido = apellido
         self.telefono = telefono
 
-
     def getNombre(self):
         return self.nombre
 

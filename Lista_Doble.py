@@ -1,11 +1,16 @@
 from Nodo import Nodo
+from Contacto import Contacto
 
 class Lista_doble_enlace:
 
     def __init__(self):
         self.primero = None
 
-    def setContacto(self, nuevo):
+    def setContacto(self, nombre, apellido, telefono):
+
+        conta = Contacto(nombre, apellido, telefono)
+        nuevo = Nodo()
+        nuevo.valor = conta
 
         if self.primero == None: #Lista vacía
             self.primero = nuevo
@@ -15,7 +20,7 @@ class Lista_doble_enlace:
             while actual.siguiente != None:
                 actual = actual.siguiente
             nuevo.anterior = actual
-            aux.siguiente = nuevo
+            actual.siguiente = nuevo
 
 
     def getContacto(self, telefono):
@@ -29,3 +34,18 @@ class Lista_doble_enlace:
             actual = actual.siguiente
         if encontrado == False:
             return None
+
+    def recorrer(self):
+        actual = self.primero
+        while actual != None:
+            print (actual.valor.getTelefono())
+            actual = actual.siguiente
+
+#lista = Lista_doble_enlace()
+#lista.setContacto("adolfo", "Perex", 22222222)
+#lista.setContacto("adolfo", "Perex", 4)
+#lista.setContacto("adolfo", "Perex", 1)
+#lista.setContacto("adolfo", "Perex", 22222)
+#lista.setContacto("adolfo", "Perex", 8)
+#lista.recorrer()
+
