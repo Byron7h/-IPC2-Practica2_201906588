@@ -28,9 +28,10 @@ class Lista_doble_enlace:
         actual = self.primero
         encontrado = False
         while actual != None:
-            if actual.getTelefono() == telefono:
+            if actual.valor.getTelefono() == telefono:
                 encontrado = True
                 return actual
+                break
             actual = actual.siguiente
         if encontrado == False:
             return None

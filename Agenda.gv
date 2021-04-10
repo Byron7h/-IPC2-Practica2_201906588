@@ -1,0 +1,19 @@
+digraph G {
+	node [shape=box]
+	edge [arrowhead=none]
+	0 [label="Nombre: jose
+Apellido: feliciano
+Teléfono: 25252525"]
+	1 [label="Nombre: jose
+Apellido: feliciano
+Teléfono: 25252525"]
+	0 -> 1
+	2 [label="Nombre: jose
+Apellido: feliciano
+Teléfono: 25252525"]
+	1 -> 2
+	3 [label="Nombre: jose
+Apellido: feliciano
+Teléfono: 25252525"]
+	2 -> 3
+}
