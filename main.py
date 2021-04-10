@@ -101,7 +101,6 @@ if __name__ == '__main__':
             actual = actual.siguiente
 
             while actual != None:
-                print (actual.valor.getTelefono())
                 val = "Nombre: " + str(actual.valor.getNombre()) + "\n" + "Apellido: " + str(actual.valor.getApellido()) + "\n" + "Teléfono: " + str(actual.valor.getTelefono()) 
                 g.node(str(contador), str(val))                               
                 g.edge(str(contador-1), str(contador))          
